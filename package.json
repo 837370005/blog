@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/837370005/blog/issues"
   },
-  "homepage": "https://github.com/837370005/blog#readme"
+  "homepage": "https://github.com/837370005/blog#readme",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.35"
+  }
 }
