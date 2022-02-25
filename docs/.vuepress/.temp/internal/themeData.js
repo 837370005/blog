@@ -1,7 +1,8 @@
 export const themeData = {
-  "title": "Element3",
-  "description": "vuepress搭建的Element3文档",
+  "title": "Ella",
+  "description": "vuepress搭建的个人博客",
   "logo": "/element3.svg",
+  "base": "/blog/",
   "navbar": [
     {
       "link": "/",

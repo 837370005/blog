@@ -14,8 +14,14 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1645674826000,
+    "contributors": [
+      {
+        "name": "zhailiqiong",
+        "email": "zhailiqiong@123.com",
+        "commits": 1
+      }
+    ]
   },
   "filePathRelative": "blog/vuepress/setting.md"
 }
