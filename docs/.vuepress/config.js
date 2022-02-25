@@ -4,6 +4,7 @@ module.exports = {
       title:"Element3",
       description:"vuepress搭建的Element3文档",
       logo:"/element3.svg",
+      base: '/blog/',
       navbar:[
         {
           link:"/",
