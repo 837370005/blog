@@ -1,26 +1,38 @@
 export const themeData = {
-  "title": "Ella",
-  "description": "vuepress搭建的个人博客",
   "logo": "/element3.svg",
-  "base": "/blog/",
   "navbar": [
     {
       "link": "/",
       "text": "首页"
     },
     {
-      "link": "/blog/vuepress",
-      "text": "博客"
+      "link": "/js",
+      "text": "JS"
+    },
+    {
+      "link": "/ts",
+      "text": "ts"
+    },
+    {
+      "link": "/utils/construction/webpack",
+      "text": "工具"
+    },
+    {
+      "link": "/blog/",
+      "text": "其它"
     }
   ],
   "sidebar": [
     {
-      "text": "安装",
-      "link": "/blog/vuepress/"
+      "text": "首页",
+      "link": "/"
     },
     {
-      "text": "配置",
-      "link": "/blog/vuepress/setting"
+      "text": "工具",
+      "children": [
+        "/utils/construction/vite",
+        "/utils/construction/webpack"
+      ]
     }
   ],
   "locales": {
