@@ -202,7 +202,7 @@ new Myflow().step1().step2()
 new Myflow().next().step1().next().step2()
 
 ```
-对比TS和ES中的类，TS把ES中的一些缺失都补回来了，这样TS更像一门面对对象语言
+对比TS和ES中的类，TS把ES中的一些缺失都补回来了，这样TS更像一门面向对象语言
 
 ## 类和接口间的关系
 ```js

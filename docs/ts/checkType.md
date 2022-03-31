@@ -72,9 +72,68 @@ let handler2 = (a: number, b: number, c: number) => {}
 hot(handler2) // 源
 1）参数：目标函数要比源多
 2）可选参数和剩余参数
+handler2 = handler1
+// handler1 = handler2 报错
 
 a = b
 a.固定参数，是可以兼容可选参数和剩余参数 
 b.
 a = c
+```
+
+:::tip
+接口之间的兼容性，函数之间的兼容性，正好是相反的
+:::
+
+
+### 可选参数和剩余参数
+```js
+let a = (p1: number, p2: number) => {}
+let b = (p1?: number, p2?: number) => {}
+let c = (...args: number[]) => {}
+a = b
+a = c
+// b = a 不兼容
+// b = c // 不兼容 也可以修改 "strictFunctionTypes": false, 
+// 剩余参数可以兼容固定参数和可选参数
+c = a
+c = b
+```
+
+### 参数类型
+参数多的要兼容参数少的
+```js
+interface X {
+    a: string;
+    b: string;
+}
+
+interface Y {
+    a: string;
+    b: string;
+    c: string;
+}
+let p = (point: X) => {}
+let q = (point: Y) => {}
+// p = q
+q = p
+```
+函数参数之间可以相互赋值的情况，叫做函数参数的双向协变， 这种情况，允许我们把一个精确的类型赋给一个不精确的类型，（这样很方便，不需要把不精确的断言）参数少的可以赋值给参数多的
+
+
+### 返回值类型
+```js
+let f = () => ({name: 'Aclie'})
+let g = () => ({name: 'Aclie', age: 11})
+
+f = g // 成员少的要兼容成员多的
+// g = f 不兼容，
+```
+
+### 函数重载
+```js
+function overload (a: number, b: number): number;
+function overload (a: string, b: string): string;
+// function overload (a: any, b: any, c: any): any {} // 报错，参数少的不能兼容参数多的
+function overload (a: any): any {} // 参数多的兼容参数少的
 ```

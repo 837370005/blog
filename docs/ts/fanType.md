@@ -51,8 +51,10 @@ let myLog: Log = log
 interface Log {
     <T>(val: T): T
 }
+let myLog: Log = log
+
 // 泛型约束了一个函数，也可以约束接口的其它的成员，
-interface Log<T> {// 这样拉接口所有成员的都可以泛型变理的约束，注意：当泛型变量约束了整个接口之后，必须指定一个类型
+interface Log<T> {// 这样接口所有成员的都可以泛型变量的约束，注意：当泛型变量约束了整个接口之后，必须指定一个类型
     (val: T): T
 }
 // let myLog: Log = log // 缺少一个类型参数

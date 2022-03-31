@@ -46,7 +46,8 @@ module.exports = {
                 text: '工具',
                 children: [
                     '/utils/construction/vite',
-                    '/utils/construction/webpack'
+                    '/utils/construction/webpack',
+                    '/utils/install/homebrew/install'
                 ]
             }
         ]

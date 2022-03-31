@@ -1,6 +1,6 @@
 # 安装homebrew
 官网地址
-:::
+:::tip
 https://brew.sh/index_zh-cn
 :::
 ```js
